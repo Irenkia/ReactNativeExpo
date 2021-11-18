@@ -46,11 +46,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         borderBottomWidth: 1,
         marginTop: 12,
-
     },
     input: {
         textAlign: 'center'
-
     },
     text: {
         marginTop: 30,
