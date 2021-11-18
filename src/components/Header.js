@@ -1,47 +1,31 @@
 import React from 'react';
-//import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import PropTypes from 'prop-types';
 
-export default class Header extends React.Component {
-    render() {
-        return (
-            <View style={styles.headerContainer}>
-                <Text style={styles.headerTitle}>
-                    Greetings!
-                </Text>
-
-            </View>
-        )
-    }
-
+const Header = ({ title }) => {
+    return (
+        <View style={styles.headerContainer}>
+            <Text style={styles.headerTitle}>{title}</Text>
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
     headerContainer: {
-        flex: 1,
-        flexDirection: "column",
-        alignSelf: 'stretch',
-        paddingTop: 20,
-        paddingBottom: 5,
+        padding: 10,
+        justifyContent: "center",
+        alignItems: 'center',
+        width: '100%',
         backgroundColor: '#f3f3f3'
     },
-
     headerTitle: {
         fontWeight: 'bold',
         fontSize: 25,
         textAlign: 'center'
-
     }
-
-    // headerContainer: {
-    //     flex: 1,
-    //     justifyContent: 'center'
-    // },
-
-    // headerTitle: {
-    //     fontSize: 25,
-    //     fontWeight: '700',
-    //     padding: 10
-    // }
-
 })
+
+Header.propTypes = {
+    title: PropTypes.string.isRequired,
+};
+export default Header;
