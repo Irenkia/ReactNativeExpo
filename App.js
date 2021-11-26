@@ -1,18 +1,21 @@
 import React from 'react';
 import { StyleSheet, View, StatusBar } from 'react-native';
-import Home from './src/components/Home';
+//import Navigation from './src/Navigation';
+import NewNavigation from './src/NewNavigation';
 
-export default function App() {
+const App = () => {
   return (
     <View style={styles.container}>
       <StatusBar />
-      <Home />
+      {/* <Navigation /> */}
+      <NewNavigation />
     </View>
-  );
-}
+  )
+};
+export default App;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
   },
 });

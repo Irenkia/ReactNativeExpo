@@ -1,1 +1,1 @@
-export const TITLE = 'Greetings!';
+export const TITLE = 'My Header';
