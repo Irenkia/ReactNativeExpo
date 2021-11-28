@@ -1,51 +1,42 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import styles from "./styles";
+import styles from "./ProfileStyles";
 
-function ProfileScreen({ route, navigation }) {
+function ProfileScreen({ navigation, route }) {
 
-    const { itemId, otherParam } = route.params;
+    {/* setOptions */ }
+    const { friends } = route.params;
+    const Change = () => {
+        return (
+            navigation.setParams({
+                friends: friends[0] === 'Brent' ? ['Wojciech', 'Szymon', 'Jakub'] : ['Brent', 'Satya', 'Michas']
+            })
+        )
+    }
 
     return (
         <View style={styles.container}>
+            <Text style={styles.heading}>Profile Screen</Text>
+
+            {/* setParams */}
+            <Text style={styles.friends}>Friends: </Text>
+            <Text style={styles.text}>{friends[0]}</Text>
+            <Text style={styles.text}>{friends[1]}</Text>
+            <Text style={styles.text}>{friends[2]}</Text>
 
             <TouchableOpacity style={styles.button}
-                onPress={() => navigation.navigate('Home')}>
-                <Text>To Home</Text>
+                title="Swap profile name and friends"
+                onPress={Change} >
+                <Text>Swap profile name and friends</Text>
             </TouchableOpacity>
 
-            <View>
-                <Text>itemId: {JSON.stringify(itemId)}</Text>
-                <Text>otherParam: {JSON.stringify(otherParam)}</Text>
-            </View>
-
-            <TouchableOpacity
-                title="Go to Details... again"
-                style={styles.button}
-                onPress={() => navigation.push('Profile', { itemId: Math.random() * 100, otherParam: 'Overview' },)}>
-                <Text>Go to Details...again</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-                title="Go to Home"
-                style={styles.button}
-                onPress={() => navigation.navigate('Home')}>
-                <Text>Go to Home</Text>
-            </TouchableOpacity>
             <TouchableOpacity
                 title="Go back"
                 style={styles.button}
                 onPress={() => navigation.goBack()}>
                 <Text>Go back</Text>
             </TouchableOpacity>
-            <TouchableOpacity
-                title="Go back to first screen in stack"
-                style={styles.button}
-                onPress={() => navigation.popToTop()}>
-                <Text>Go back to first screen in stack</Text>
-            </TouchableOpacity>
-
-        </View>
+        </View >
     )
 };
 

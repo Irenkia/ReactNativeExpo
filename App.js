@@ -1,17 +1,15 @@
 import React from 'react';
 import { StyleSheet, View, StatusBar } from 'react-native';
-//import Navigation from './src/Navigation';
-import NewNavigation from './src/NewNavigation';
-
+import Navigation from './src/navigations/Navigation';
 const App = () => {
   return (
     <View style={styles.container}>
       <StatusBar />
-      {/* <Navigation /> */}
-      <NewNavigation />
+      <Navigation />
     </View>
   )
 };
+
 export default App;
 
 const styles = StyleSheet.create({
