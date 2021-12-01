@@ -3,7 +3,7 @@ import { View, TouchableOpacity, Text } from "react-native";
 import Header from '../../components/Header';
 import Main from "../../components/Main";
 import Footer from "../../components/Footer";
-import styles from './HomeStyles';
+import styles from './stylesHome';
 import { TITLE } from "../../constants/Constants";
 
 const HomeScreen = ({ navigation }) => {
@@ -15,10 +15,9 @@ const HomeScreen = ({ navigation }) => {
             <Text style={styles.text}>This is the Home screen of the app</Text>
 
             <View>
-                <TouchableOpacity title="Go to Brents profile"
+                <TouchableOpacity
                     onPress={() => navigation.navigate('Profile', {
                         friends: ['Brent', 'Satya', 'Michas'],
-                        title: 'Brents profile'
                     })}>
                     <Text style={styles.button}>Go to Brents profile</Text>
                 </TouchableOpacity>

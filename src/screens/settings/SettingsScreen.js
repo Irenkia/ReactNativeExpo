@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import styles from '../home/HomeStyles';
+import styles from '../home/stylesHome';
 const SettingsScreen = () => {
     return (
         <View style={styles.container}>
