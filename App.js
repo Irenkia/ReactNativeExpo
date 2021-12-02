@@ -1,12 +1,14 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import { StyleSheet, View, StatusBar } from 'react-native';
-import Navigation from './src/navigations/Navigation';
+import DrawerNavigation from './src/navigations/DrawerNavigation/DrawerNavigation';
+
 const App = () => {
+
   return (
     <View style={styles.container}>
       <StatusBar />
-      <Navigation />
+      <DrawerNavigation />
     </View>
   )
 };
