@@ -1,29 +1,29 @@
 import React from 'react';
 import { TouchableOpacity, View, Text, SafeAreaView } from 'react-native';
-import stylesPages from './stylesPages';
+import stylesFirst from './stylesFirst';
 
 const FirstPage = ({ navigation }) => {
     return (
-        <SafeAreaView style={{ flex: 1 }}>
-            <View style={{ flex: 1, padding: 16 }}>
-                <View style={stylesPages.container}>
+        <SafeAreaView style={stylesFirst.safeAreaView}>
+            <View style={stylesFirst.view}>
+                <View style={stylesFirst.container}>
                     <Text
-                        style={stylesPages.text}>
+                        style={stylesFirst.text}>
                         This is the First Page
                     </Text>
 
-                    <TouchableOpacity style={stylesPages.button}
+                    <TouchableOpacity style={stylesFirst.button}
                         onPress={() => navigation.navigate('SecondPage')} >
                         <Text>Go to Second Page</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={stylesPages.button}
+                    <TouchableOpacity style={stylesFirst.button}
                         onPress={() => navigation.navigate('ThirdPage')} >
                         <Text>Go to Third Page</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={stylesPages.button}
-                        onPress={() => navigation.goBack()} >
+                    <TouchableOpacity style={stylesFirst.button}
+                        onPress={() => navigation.navigate('Home')} >
                         <Text>Go to Home</Text>
                     </TouchableOpacity>
 

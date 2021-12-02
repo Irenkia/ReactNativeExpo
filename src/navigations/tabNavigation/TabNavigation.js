@@ -2,10 +2,10 @@ import React from "react";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import Home from '../screens/home/Home';
-import { ProfileScreen } from '../screens/profile/ProfileScreen';
-import SettingsScreen from "../screens/settings/SettingsScreen";
-import NavigationDrawerStructure from "./DrawerNavigation/NavigationDrawerStructure";
+import Home from '../../screens/home/Home';
+import { ProfileScreen } from '../../screens/profile/ProfileScreen';
+import SettingsScreen from "../../screens/settings/SettingsScreen";
+import NavigationDrawerStructure from "../DrawerNavigation/NavigationDrawerStructure";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -20,6 +20,7 @@ const Pages = () => {
         </Stack.Navigator>
     )
 }
+
 const TabNavigation = ({ navigation }) => {
 
     return (
@@ -39,10 +40,7 @@ const TabNavigation = ({ navigation }) => {
                 tabBarInactiveTintColor: 'gray'
             })}
         >
-            <Tab.Screen
-                name='Page'
-                component={Pages}
-
+            <Tab.Screen name='Page' component={Pages}
                 options={{
                     title: 'Home',
                     headerLeft: () =>
@@ -50,11 +48,11 @@ const TabNavigation = ({ navigation }) => {
                             navigationProps={navigation}
                         />,
                     headerStyle: {
-                        backgroundColor: '#f4511e', //Set Header color
+                        backgroundColor: '#f4511e',
                     },
-                    headerTintColor: '#fff', //Set Header text color
+                    headerTintColor: '#fff',
                     headerTitleStyle: {
-                        fontWeight: 'bold', //Set Header text style
+                        fontWeight: 'bold',
                     },
                 }}
             >
@@ -67,11 +65,11 @@ const TabNavigation = ({ navigation }) => {
                             navigationProps={navigation}
                         />,
                     headerStyle: {
-                        backgroundColor: '#f4511e', //Set Header color
+                        backgroundColor: '#f4511e',
                     },
-                    headerTintColor: '#fff', //Set Header text color
+                    headerTintColor: '#fff',
                     headerTitleStyle: {
-                        fontWeight: 'bold', //Set Header text style
+                        fontWeight: 'bold',
                     },
                 }}
             ></Tab.Screen>

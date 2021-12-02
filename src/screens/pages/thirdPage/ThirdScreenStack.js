@@ -1,13 +1,14 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import NavigationDrawerStructure from '../../navigations/DrawerNavigation/NavigationDrawerStructure';
-import SecondPage from './SecondPage';
+import NavigationDrawerStructure from '../../../navigations/DrawerNavigation/NavigationDrawerStructure';
+import ThirdPage from './ThirdPage';
 
 const Stack = createNativeStackNavigator();
 
-const SecondScreenStack = ({ navigation }) => {
+
+const ThirdScreenStack = ({ navigation }) => {
     return (
-        <Stack.Navigator initialRouteName="Second"
+        <Stack.Navigator initialRouteName="Third"
             screenOptions={{
                 headerLeft: () =>
                     <NavigationDrawerStructure
@@ -21,12 +22,12 @@ const SecondScreenStack = ({ navigation }) => {
                     fontWeight: 'bold',
                 }
             }}>
-            <Stack.Screen name="Second" component={SecondPage}
+            <Stack.Screen name="Third" component={ThirdPage}
                 options={{
-                    title: 'Second Page',
+                    title: 'Third Page',
                 }} />
         </Stack.Navigator>
     );
 }
 
-export default SecondScreenStack;
+export default ThirdScreenStack;

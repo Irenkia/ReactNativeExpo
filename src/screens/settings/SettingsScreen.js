@@ -1,11 +1,15 @@
 import React from 'react';
-import { Text, View } from 'react-native';
-import styles from '../home/stylesHome';
+import { Text, View, SafeAreaView } from 'react-native';
+import stylesSettings from './stylesSettings';
+
 const SettingsScreen = () => {
     return (
-        <View style={styles.container}>
-            <Text>Hello Settings!</Text>
-        </View>
+        <SafeAreaView style={stylesSettings.safeAreaView}>
+            <View style={stylesSettings.container}>
+                <Text style={stylesSettings.text}>Hello Settings!</Text>
+            </View>
+        </SafeAreaView>
+
     )
 }
 export default SettingsScreen;

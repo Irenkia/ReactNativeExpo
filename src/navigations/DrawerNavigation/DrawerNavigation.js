@@ -1,10 +1,10 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import FirstScreenStack from "../../screens/pages/FirstScreenStack";
-import SecondScreenStack from "../../screens/pages/SecondScreenStack";
-import ThirdScreenStack from "../../screens/pages/ThirdScreenStack";
-import TabNavigation from "../TabNavigation";
+import FirstScreenStack from "../../screens/pages/firstPage/FirstScreenStack";
+import SecondScreenStack from "../../screens/pages/secondPage/SecondScreenStack";
+import ThirdScreenStack from "../../screens/pages/thirdPage/ThirdScreenStack";
+import TabNavigation from "../tabNavigation/TabNavigation";
 
 const Drawer = createDrawerNavigator();
 

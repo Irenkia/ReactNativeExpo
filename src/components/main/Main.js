@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, Button } from 'react-native';
+import { View, Text, TextInput, Button } from 'react-native';
+import stylesMain from './stylesMain';
 
 const Main = () => {
 
@@ -19,10 +20,10 @@ const Main = () => {
     }
 
     return (
-        <View style={styles.container}>
-            <View style={styles.wrapper}>
+        <View style={stylesMain.container}>
+            <View style={stylesMain.wrapper}>
                 <TextInput
-                    style={styles.input}
+                    style={stylesMain.input}
                     onChangeText={changeName}
                     placeholder={'write your name'}
                     value={name}
@@ -30,29 +31,10 @@ const Main = () => {
                 <Button title={'ok'} onPress={addName} />
             </View>
             <View >
-                <Text style={styles.text} >Welcome  {textBody} !</Text>
+                <Text style={stylesMain.text} >Welcome  {textBody} !</Text>
             </View>
         </View>
     );
 };
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    wrapper: {
-        flexDirection: 'row',
-        borderBottomWidth: 1,
-        marginTop: 12,
-    },
-    input: {
-        textAlign: 'center'
-    },
-    text: {
-        marginTop: 30,
-        fontSize: 25
-    }
-});
 export default Main;
