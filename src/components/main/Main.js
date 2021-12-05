@@ -7,10 +7,6 @@ const Main = () => {
     const [name, setName] = useState('');
     const [textBody, setTextBody] = useState('friend');
 
-    const changeName = (event) => {
-        setName(event);
-    }
-
     const addName = () => {
         if (name === '') {
             return alert('The field cannot be empty, please enter your name');
@@ -24,7 +20,7 @@ const Main = () => {
             <View style={stylesMain.wrapper}>
                 <TextInput
                     style={stylesMain.input}
-                    onChangeText={changeName}
+                    onChangeText={(event) => setName(event)}
                     placeholder={'write your name'}
                     value={name}
                 />
