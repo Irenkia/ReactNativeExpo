@@ -31,7 +31,12 @@ export default StyleSheet.create({
   },
   footer: {
     flex: .1
-  }
+  },
+  repoList: {
+    flex: 1,
+    backgroundColor: '#fff',
+    marginTop: 50
+  },
 
 });
 
