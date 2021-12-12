@@ -6,6 +6,7 @@ import DrawerNavigation from './src/navigations/DrawerNavigation/DrawerNavigatio
 const App = () => {
 
   return (
+
     <SafeAreaView style={styles.safeAreaView}>
       <View style={styles.container}>
         <StatusBar />
