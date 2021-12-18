@@ -1,13 +1,14 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Home from './Home';
 import NavigationDrawerStructure from '../../navigations/DrawerNavigation/NavigationDrawerStructure';
+import ThirdPage from './ThirdPage';
 
 const Stack = createNativeStackNavigator();
 
-const HomeScreen = ({ navigation }) => {
+
+const ThirdScreenStack = ({ navigation }) => {
     return (
-        <Stack.Navigator initialRouteName="Home"
+        <Stack.Navigator initialRouteName="Third"
             screenOptions={{
                 headerLeft: () =>
                     <NavigationDrawerStructure
@@ -19,14 +20,14 @@ const HomeScreen = ({ navigation }) => {
                 headerTintColor: '#fff',
                 headerTitleStyle: {
                     fontWeight: 'bold',
-                },
+                }
             }}>
-            <Stack.Screen name="Home" component={Home}
+            <Stack.Screen name="Third" component={ThirdPage}
                 options={{
-                    title: 'Home',
+                    title: 'Third Page',
                 }} />
         </Stack.Navigator>
     );
 }
 
-export default HomeScreen;
+export default ThirdScreenStack;

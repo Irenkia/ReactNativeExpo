@@ -1,12 +1,13 @@
 import React from "react";
 import { View, TouchableOpacity, Text, SafeAreaView } from "react-native";
-import Header from '../../components/header/Header';
-import Main from "../../components/main/Main";
-import Footer from "../../components/footer/Footer";
+import Header from '../../components/Header/Header';
+import Main from "../../components/Main/Main";
+import Footer from "../../components/Footer/Footer";
 import stylesHome from './stylesHome';
-import { TITLE } from "../../constants/Constants";
+import { TITLE } from "../../constants/constants";
 
-import Theme from "../../store/themes/Theme";
+// import Theme from "../../store/themes/Theme";
+import Theme from "../../components/themes/Theme";
 
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';

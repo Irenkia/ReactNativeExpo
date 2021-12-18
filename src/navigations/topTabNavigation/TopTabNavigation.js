@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import ScrollableTabView, { DefaultTabBar, ScrollableTabBar } from 'react-native-scrollable-tab-view';
-import Home from '../../screens/home/Home';
+import Home from '../../screens/Home/Home';
 
 // const Dimensions = require('Dimensions');
 // const ScreenWidth = Dimensions.get('window').width;

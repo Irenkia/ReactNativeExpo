@@ -1,6 +1,6 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import NavigationDrawerStructure from '../../../navigations/DrawerNavigation/NavigationDrawerStructure';
+import NavigationDrawerStructure from '../../navigations/DrawerNavigation/NavigationDrawerStructure';
 import SecondPage from './SecondPage';
 
 const Stack = createNativeStackNavigator();

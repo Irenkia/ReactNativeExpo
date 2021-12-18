@@ -2,9 +2,9 @@ import React from "react";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import Home from '../../screens/home/Home';
-import { ProfileScreen } from '../../screens/profile/ProfileScreen';
-import SettingsScreen from "../../screens/settings/SettingsScreen";
+import Home from '../../screens/Home/Home';
+import { ProfileScreen } from '../../screens/Profile/ProfileScreen';
+import SettingsScreen from "../../screens/Settings/SettingsScreen";
 import NavigationDrawerStructure from "../DrawerNavigation/NavigationDrawerStructure";
 
 const Tab = createBottomTabNavigator();
