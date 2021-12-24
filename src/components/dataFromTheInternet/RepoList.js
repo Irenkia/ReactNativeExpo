@@ -3,7 +3,7 @@ import { View, Text, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 import stylesData from './stylesData';
 
-import { ListRepos } from './Redusers';
+import { ListRepos } from '../../store/actions';
 
 class RepoList extends Component {
     componentDidMount() {

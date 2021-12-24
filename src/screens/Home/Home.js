@@ -6,7 +6,6 @@ import Footer from "../../components/Footer/Footer";
 import stylesHome from './stylesHome';
 import { TITLE } from "../../constants/constants";
 
-// import Theme from "../../store/themes/Theme";
 import Theme from "../../components/themes/Theme";
 
 import { createStore, applyMiddleware } from 'redux';
@@ -14,8 +13,8 @@ import { Provider } from 'react-redux';
 import axios from 'axios';
 import axiosMiddleware from 'redux-axios-middleware';
 
-import Reducer from '../../store/dataFromTheInternet/Redusers';
-import RepoList from '../../store/dataFromTheInternet/RepoList';
+import Reducer from '../../store/redusers';
+import RepoList from '../../components/dataFromTheInternet/RepoList';
 
 const client = axios.create({
     baseURL: 'https://jsonplaceholder.typicode.com/comments/?_limit=30&_page=',
